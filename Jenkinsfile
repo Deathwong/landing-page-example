@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent { label 'agent-1' }
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/TON_USERNAME/landing-page-example'
+                    url: 'https://github.com/fredericEducentre/landing-page-example'
             }
         }
         stage('Build') {
